@@ -7,10 +7,11 @@ $(function(){
     query.get(id).then(function(results){   //根据地址栏匹配的id来查询
       let songs = results.attributes
       // let song = songs.filter(i=>i.id === id)[0]
-      let {url,name,lyric,coverUrl} = songs
+      let {coverUrl,url,name,lyric} = songs
+      cover(coverUrl)        //歌曲封面
       initPlayer(url)         //播放歌曲
       initText(name,lyric)    //歌名与歌词
-      cover(coverUrl)        //歌曲封面
+
     })
   // })
 
