@@ -1,0 +1,257 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+*::after,*::before{
+  box-sizing: border-box;
+}
+
+body{
+  font: 14px/1.5 Helvetica,sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+}
+h2{
+  font-weight: 400;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+.play-head{
+  position: relative;
+  color: white;
+  padding: 30px 10px 30px 15px;
+  overflow:hidden;
+}
+.bg-wrap{
+  background: url(http://music.163.com/api/img/blur/19190875951623640?param=170y170) no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter:blur(20px); /*高斯模糊*/
+  transform: scale(1.5)
+}
+.head-wrap{
+  position: relative;
+  display: flex;
+}
+.head-l{
+  position: relative;
+}
+.head-l img{
+  width: 126px;
+  height: 126px;
+}
+.head-l .icon-cover{
+  color: white;
+  font-size: 3.2vw;
+  padding: 0 8px;
+  background-color:rgba(217,48,48,.8);
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 17px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 1;
+}
+.lst-num::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 18px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.lst-num span{
+  font-size: 3.2vw;
+  position: absolute;
+  top: 0;
+  right: 2px;
+  z-index: 1;
+}
+/*.intro span:nth-child(3){
+  margin-bottom: 5px;
+}*/
+.head-l svg.icon-earphone{
+  height: 3.5vw;
+  width: 3.5vw;
+  fill:#fff;
+  position: absolute;
+  top: .5vw;
+  right: 50px;
+  z-index: 1;
+}
+.head-r {
+  flex-grow:1;
+  margin-left: 15px;
+}
+.head-r h2{
+  padding-top: 1px;
+  font-size: 4.5vw;
+  line-height: 1.3;
+  height: 11.7vw;
+}
+.head-r .author{
+  margin-top: 20px;
+}
+.head-r .author img{
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+.head-r .author p{
+  font-size: 3.6vw;
+  display: inline-block;
+  color: #ccc;
+  transform: translateY(-50%);
+}
+
+/*介绍*/
+.play-intro{
+  margin: 0 10px 0 15px;
+}
+.play-intro .tag-list{
+  display: flex;
+  line-height: 4;
+}
+.play-intro .tag-list .tags span{
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 1px 8px;
+  font-size: 12px;
+  line-height: 2;
+  color: #333;
+  border: 1px solid #e9e9e9;
+  border-radius:32px;
+}
+.play-intro .intro{
+  padding-bottom: 15px;
+  display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    height: 64px;
+}
+.play-intro .intro.active{
+  height: 130px;
+}
+.play-intro .intro span{
+  font-size: 4vw;
+  color: #666;
+}
+.icon-arrow{
+  text-align: right;
+}
+.icon-arrow .icon{
+  height: 4.5vw;
+  width: 4.5vw;
+}
+.icon-arrow .icon-arrow-up{
+  display: none;
+}
+.icon-arrow .icon-arrow-down.hide{
+  display: none
+}
+
+/*播放列表*/
+.play-list{
+  padding-bottom: 16vw;
+}
+.play-list ol.list{
+  padding-left: calc(2.6vw + 2px);
+}
+.play-list>h3{
+  font-size: 3.2vw;
+  line-height: 2;
+  font-weight: normal;
+  color: #666;
+  background-color: #eeeff0;
+  padding-left: 10px;
+}
+.play-list ol.list>li{
+  padding:1vw 0;
+  position: relative;
+}
+
+.play-list ol.list>li a{
+  text-decoration:none;
+  color:inherit;
+}
+ol.list>li>a .listNumber{
+  font-size: 4.53vw;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+ol.list>li>a .listNumber{
+  color: #888;
+}
+ol.list>li>a .list-wrap{
+  margin-left: 30px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.play-list ol.list>li h3{
+  font-size:4.5vw;
+  font-weight: normal;
+}
+.play-list ol.list>li p{
+  font-size:3.2vw;
+  color: #888;
+  display: flex;
+  line-height: 2;
+  align-items: center;
+}
+.play-list ol.list>li .play-circled svg.play{
+  fill: #b7b6b6;
+  width:5.9vw;
+  height: 5.9vw;
+  position: absolute;
+  right: 4vw;
+  top:50%;
+  transform: translateY(-50%);
+}
+.play-list ol.list>li svg.sq{
+  width: 4vw;
+  height: 4vw;
+  margin-right: .5em;
+  fill:#fe672e;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+footer a{
+  display: inline-block;
+  background:#d43b32;
+  color: #fff;
+  width: 100%;
+  border-radius: 6vw;
+  padding:7px 10px;
+}
+footer a::before{
+  content:'';
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  height: 25px;
+  width: 23px;
+  margin-right: 4px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MiA0NiI+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgZD0ibTMyLjc2OSAzLjg3Yy0uNTMxLS41My00LjI0NC0zLjE3OS03LjQyOC0xLjA2LTMuMTgzIDIuMTItMi4xNjcgNS4xNjgtMi4xNjcgNS4xNjhsNC4yODggMTUuNzUzdi44MDljMCAzLjUxNS0yLjg0OSA2LjM2LTYuMzY0IDYuMzYtMy41MTYgMC01Ljk5OC0yLjg2Ni02LjM2Ni02LjM2LTEuMDYxLTEwLjA3IDExLjA5LTEzLjQ1NSAxNy41MDYtOS4yODkgMTAuNjA5IDYuODkgNS44MzQgMTguMDIgNS44MzQgMTguMDItMi42NTEgNi4zNTktOC40ODcgMTAuNi0xNi40NDQgMTAuODc5LTEwLjgzMy4zODItMTkuNjI4LTguNzc5LTE5LjYyOC0xOS42MTEgMC04LjQwNiA1LjI5NC0xNS41NzUgMTIuNzMxLTE4LjM2NSIvPjwvc3ZnPg==);
+}

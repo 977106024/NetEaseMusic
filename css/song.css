@@ -1,0 +1,136 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+*::after,*::before{
+  box-sizing: border-box;
+}
+
+@keyframes circle{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.page{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:url(http://p3.music.126.net/io4ohZD8Hs35qa4MZYzmFA==/109951163032646328.jpg) center;
+  background-size: cover;
+}
+.disc-container{
+  position: relative;
+}
+/*svg*/
+.disc-container .icon-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  border:3px solid white;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  height:5em;
+  width: 5em;
+}
+.disc-container .icon-wrap .icon{
+  fill: white;
+  width: 3em;
+  height: 3em;
+}
+
+.disc-container .needle{
+  width: 24vw;
+  position: absolute;
+  left:47vw;
+}
+.disc-container .disc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:18vw;
+}
+.disc-container .circle{
+  width: 72vw;
+}
+.disc-container .halo{
+  width: 72vw;
+  position: absolute;
+  animation: circle 15s infinite linear;
+  animation-play-state: paused;
+}
+.disc-container .cover{
+  width: 47vw;
+  position: absolute;
+  border-radius: 50%;
+  animation: circle 15s infinite linear;
+  animation-play-state: paused;
+}
+.disc-container.palying .halo,
+.disc-container.palying .cover{
+  animation-play-state: running;
+}
+/*播放/暂停*/
+.disc-container .icon-pause{
+  display: none;
+}
+.disc-container.palying .icon-play{
+  display: none;
+}
+.disc-container.palying .icon-pause{
+  display: block;
+}
+
+.song-description{
+  flex-grow: 1;
+  color:#aeabac;
+  text-align: center;
+  margin-top:20px;
+  line-height: 2;
+}
+.song-description h1{
+  font-size: 18px;
+  color: white;
+}
+.song-description p{
+  font-size: 16px;
+  line-height: 28px;
+
+}
+.song-description .lyric{
+  height: 84px;
+  /*border: 1px solid red;*/
+  overflow: hidden;
+}
+.song-description .lyric .lines{
+  transition: transform 0.3s;
+}
+.song-description p.active{
+  color:white;
+}
+.page .links{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.page .links>a{
+  color: #d43b32;
+  width: 37.5vw;
+  text-align: center;
+  margin:10px;
+  padding: 2vw;
+  border:1px solid #d43b32;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 1vw;
+}
+.page .links>a.main{
+  background:#d43b32;
+  color:white;
+}
