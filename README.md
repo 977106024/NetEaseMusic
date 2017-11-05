@@ -3,4 +3,4 @@
 预览地址：http://977qianduan.top/index.html
 
 二维码：
-![img](s)
+![img](https://github.com/977106024/NetEaseMusic/blob/master/img/1509890625.png)
