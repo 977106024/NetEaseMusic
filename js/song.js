@@ -29,15 +29,18 @@ $(function(){
       audioJs.play()          //媒体api 播放歌曲
       play()
       $('.disc-container .disc').addClass('palying')   //添加旋转cd动画
+      $('.needle').addClass('play')
     }
     $('.icon-pause').on('click',function(){
       audioJs.pause()       //媒体api 暂停歌曲
       $('.disc-container .disc').removeClass('palying')
+      $('.needle').removeClass('play')
     })
     $('.icon-play').on('click',function(){    //点击播放按钮 开始播放
       audioJs.play()
       play()
       $('.disc-container .disc').addClass('palying')
+      $('.needle').addClass('play')
     })
 
 
@@ -98,6 +101,7 @@ $(function(){
     })
   }
 
+  // 兼容ios的暂停功能
   var isPlaying = false;
 
   var iconPause = document.querySelector('.icon-pause');

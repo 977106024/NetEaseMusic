@@ -53,6 +53,16 @@
   width: 24vw;
   position: absolute;
   left:47vw;
+  z-index: 1;
+  transform: rotate(-20deg);
+  transform-origin: 5% 0%;/*元素基点 y轴 x轴*/
+}
+.disc-container .needle{
+  transition: transform .5s;
+}
+.disc-container .needle.play{
+  transform: rotate(0deg);
+  transform-origin: 5% 0%;
 }
 .disc-container .disc{
   display: flex;
