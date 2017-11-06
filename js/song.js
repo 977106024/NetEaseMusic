@@ -16,8 +16,7 @@ $(function(){
   // })
 
   function cover(coverUrl){
-    let cover = `<img class="cover" src="${coverUrl}">`
-    $('.disc').append(cover)
+    $('.disc .cover').attr('src',coverUrl)
   }
 
   // 播放歌曲
