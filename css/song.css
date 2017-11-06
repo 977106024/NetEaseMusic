@@ -63,13 +63,13 @@
 .disc-container .circle{
   width: 72vw;
 }
-.disc-container .halo{
+.disc-container .disc .halo{
   width: 72vw;
   position: absolute;
   animation: circle 15s infinite linear;
   animation-play-state: paused;
 }
-.disc-container .cover{
+.disc-container .disc .cover{
   width: 47vw;
   position: absolute;
   border-radius: 50%;
