@@ -27,6 +27,7 @@ $(function(){
     audioJs = $('audio')[0]     //转成原生对象
     audioJs.oncanplay = function(){  //页面加载后自动播放
       audioJs.play()          //媒体api 播放歌曲
+      play()
       $('.disc-container .disc').addClass('palying')   //添加旋转cd动画
     }
     $('.icon-pause').on('click',function(){
@@ -35,6 +36,7 @@ $(function(){
     })
     $('.icon-play').on('click',function(){    //点击播放按钮 开始播放
       audioJs.play()
+      play()
       $('.disc-container .disc').addClass('palying')
     })
 
@@ -94,5 +96,32 @@ $(function(){
       $p.attr('data-time',object.time).text(object.words) //自定义属性 歌词时间放进去
       $p.appendTo($lyric.children('.lines'))
     })
+  }
+
+  var isPlaying = false;
+
+  var iconPause = document.querySelector('.icon-pause');
+  var container = document.querySelector('.disc');
+  var image = container.querySelector('.rotation');
+
+  iconPause.addEventListener('click', function bindEvent() {
+    isPlaying ? pause() : play();
+  });
+
+  function pause() {
+    isPlaying = false;
+    var iTransform = getComputedStyle(image).transform;
+    var cTransform = getComputedStyle(container).transform;
+    console.log(iTransform)
+    console.log(cTransform)
+    container.style.transform = cTransform === 'none'
+       ? iTransform
+       : iTransform.concat(' ', cTransform);
+    image.classList.remove('animate');
+  }
+
+  function play() {
+    isPlaying = true;
+    image.classList.add('animate');
   }
 })

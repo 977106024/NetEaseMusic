@@ -7,14 +7,14 @@
   box-sizing: border-box;
 }
 
-@keyframes circle{
+/*@keyframes circle{
   0%{
     transform: rotate(0deg);
   }
   100%{
     transform: rotate(360deg);
   }
-}
+}*/
 
 .page{
   height: 100vh;
@@ -63,25 +63,38 @@
 .disc-container .circle{
   width: 72vw;
 }
+.disc-container .disc .rotation{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .disc-container .disc .halo{
   width: 72vw;
   position: absolute;
-  animation: circle 15s infinite linear;
-  animation-play-state: paused;
-  -webkit-animation-play-state:paused; /* Safari 和 Chrome */
+  /*animation: circle 15s infinite linear;
+  animation-play-state: paused;*/
 }
 .disc-container .disc .cover{
   width: 47vw;
   position: absolute;
   border-radius: 50%;
-  animation: circle 15s infinite linear;
-  animation-play-state: paused;
-  -webkit-animation-play-state:paused; /* Safari 和 Chrome */
+  /*animation: circle 15s infinite linear;
+  animation-play-state: paused;*/
 }
-.disc-container .disc.palying .halo,
+/*.disc-container .disc.palying .halo,
 .disc-container .disc.palying .cover{
   animation-play-state: running;
-  -webkit-animation-play-state:running; /* Safari 和 Chrome */
+}*/
+
+.animate {
+  animation: round 10s linear infinite;
+}
+
+@keyframes round {
+  100% {
+    transform: rotate(1turn);
+  }
 }
 /*播放/暂停*/
 .disc-container .icon-pause{
