@@ -132,10 +132,10 @@ $(function(){
       let song = results[i].attributes
       let li =`
       <li data-id="${results[i].id}">
-      <svg class="icon-search">
-        <use xlink:href="#icon-search"></use>
-      </svg>
-      <a href="./song.html?id=${results[i].id}">${song.name} - ${song.singer}</a>
+        <svg class="icon-search">
+          <use xlink:href="#icon-search"></use>
+        </svg>
+        <a href="./song.html?id=${results[i].id}">${song.name} - ${song.singer}</a>
       </li>
         `
       $('#search-result').append(li)

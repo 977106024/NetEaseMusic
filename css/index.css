@@ -29,6 +29,7 @@ a{
 .head-fixed{ /*tab固定*/
   position: fixed;
   top: 0;
+  left:0;
   width: 100%;
   background: #fff;
   z-index: 3;
@@ -328,25 +329,25 @@ input[type="text"]#search{
   display: block;
 }
 #search-result {
-  margin:10px;
+  margin:5px;
   color: #888;
 }
 #search-result a{
   text-decoration: none;
   color: #333;
   margin-left: 43px;
-  padding: 3px 0;
   display: inline-block;
+  width: 89%;
+  line-height: 3;
 }
 #search-result>li{
   position: relative;
   border-bottom: 1px solid #e2e2e2;
-  padding: 10px 0;
 }
 #search-result li svg.icon-search{
   position: absolute;
-  top: 28.3%;
-  left: 14px;
+  top: 20.3%;
+  left: 8px;
   height: 6.9vw;
   width: 6.9vw;
   fill: rgba(0, 0, 0, 0.2);
