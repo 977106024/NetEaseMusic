@@ -41,10 +41,13 @@
 }
 .disc-container .icon-wrap .icon{
   fill: white;
-  width: 2.8em;
-  height: 2.8em;
+  width: 3em;
+  height: 3em;
 }
-
+.icon-pause{
+  width: 2.8vw;
+  height: 2.8vw;
+}
 .disc-container .needle{
   width: 24vw;
   position: absolute;
