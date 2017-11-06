@@ -39,14 +39,15 @@
   height:5em;
   width: 5em;
 }
-.disc-container .icon-wrap .icon{
+.disc-container .icon-wrap .icon-play{
   fill: white;
   width: 3em;
   height: 3em;
 }
 .icon-pause{
-  width: 2.8vw;
-  height: 2.8vw;
+  fill: white;
+  width: 2.8em;
+  height: 2.8em;
 }
 .disc-container .needle{
   width: 24vw;
@@ -75,18 +76,18 @@
   animation: circle 15s infinite linear;
   animation-play-state: paused;
 }
-.disc-container.palying .halo,
-.disc-container.palying .cover{
+.disc-container .disc.palying .halo,
+.disc-container .disc.palying .cover{
   animation-play-state: running;
 }
 /*播放/暂停*/
 .disc-container .icon-pause{
   display: none;
 }
-.disc-container.palying .icon-play{
+.disc-container .disc.palying .icon-play{
   display: none;
 }
-.disc-container.palying .icon-pause{
+.disc-container .disc.palying .icon-pause{
   display: block;
 }
 
