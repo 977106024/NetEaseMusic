@@ -84,6 +84,9 @@
 .disc-container .icon-pause{
   display: none;
 }
+.disc-container .icon-play{
+  display: block;
+}
 .disc-container .disc.palying .icon-play{
   display: none;
 }
