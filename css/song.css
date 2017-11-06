@@ -68,6 +68,7 @@
   position: absolute;
   animation: circle 15s infinite linear;
   animation-play-state: paused;
+  -webkit-animation-play-state:paused; /* Safari 和 Chrome */
 }
 .disc-container .disc .cover{
   width: 47vw;
@@ -75,10 +76,12 @@
   border-radius: 50%;
   animation: circle 15s infinite linear;
   animation-play-state: paused;
+  -webkit-animation-play-state:paused; /* Safari 和 Chrome */
 }
 .disc-container .disc.palying .halo,
 .disc-container .disc.palying .cover{
   animation-play-state: running;
+  -webkit-animation-play-state:running; /* Safari 和 Chrome */
 }
 /*播放/暂停*/
 .disc-container .icon-pause{
