@@ -122,6 +122,7 @@ $(function(){
         $('#search-result').html('没有结果...')
       }else{
         createMusic(results)// 创建歌曲li
+        searchClose()
       }
     })
     }, 400)
@@ -157,7 +158,7 @@ $(function(){
     $('.icon-close-wrap').addClass('show')
     $('.icon-close-wrap').on('click',function(){//点击清空内容且隐藏
       $('#search').val('')
-      $('svg.icon-close').removeClass('show')//x隐藏
+      $('.icon-close-wrap').removeClass('show')//x隐藏
       $('.search-content').removeClass('show')//搜素提示隐藏
       $('.hot-search').removeClass('hide') //热门搜索显示
       $('#search-result').empty()  //搜索内容清空

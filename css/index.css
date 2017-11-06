@@ -339,6 +339,10 @@ input[type="text"]#search{
   display: inline-block;
   width: 89%;
   line-height: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: normal;
 }
 #search-result>li{
   position: relative;
